@@ -31,6 +31,8 @@ body{
     <h5>Heading Two</h5>
     <h6>Heading Two</h6>
 
+    <p>This is my paragraph</p>
+
     <!-- Links -->
 
     <a href="http://page2.html">Page 2</a>
