@@ -93,7 +93,7 @@ $students[5] = ["id" => 500 , "name" => "Maryam AL Manthri"  , "address"  => "Ni
         echo "<td> $student[created_at] </td>";
 
         echo "<td>
-        <a href='edit.php'>Edit</a>
+        <a href='edit.php?id=$student[id]'>Edit</a>
         <a href='delete.php'>Delete</a>
         </td>";
         echo "</tr>";
