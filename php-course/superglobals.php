@@ -8,16 +8,19 @@
 <body>
     
 <?php 
+
+
 /*
 
  - $_GET 
  - $_POST 
  - $_SERVER
- 
- - $GOLOBALS
- - $_REQUEST 
  - $_COOKIE
  - $_SESSION 
+
+
+ - $GOLOBALS
+ - $_REQUEST 
  - $_FILES 
  - $_ENV 
 
@@ -27,11 +30,6 @@
 
 <a href="edituser.php?id=100&name=Yousuf">Edit User</a>
 
-<form action="edituser.php" method="post">
-    <input type="text" name="username">
-    <input type="password" name="password">
-    <input type="submit">
-</form>
 
 
 </body>
