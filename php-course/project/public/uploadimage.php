@@ -1,16 +1,11 @@
-<?php 
+<?php session_start(); ?>
 
-session_start();
-
-require_once "authorized.php";
-require_once "./includes/navbar.php";
-
-echo "<h1> Welcome <span style='color:red;'> " . $_SESSION['NAME'] . " </span> You are Logged In </h1>";
+<?php include "./../includes/header.php"; ?>
+<?php include "./../includes/navbar.php"; ?>
+<?php include "authorized.php"; ?>
 
 
-?>
-
-<h1>Upload Image</h1>
+<div class="container mt-3">
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 <label for="image">Image</label>
@@ -20,7 +15,7 @@ echo "<h1> Welcome <span style='color:red;'> " . $_SESSION['NAME'] . " </span> Y
 
 <?php 
 
-$path =  __DIR__ ."/uploads//";
+$path =  __DIR__."./uploads//";
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -34,7 +29,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(move_uploaded_file($tmp_name , $path . $name)) {
 
         $_SESSION['success'] = 'Image Uploaded Successfully!';
-        header("location:viewimages.php");
+        
+        header("location:images.php");
         exit;
     }
 }
+
+?>
+
+
+</div>
+
+<?php include "./../includes/footer.php"; ?>
+
