@@ -26,10 +26,10 @@ class Person {
 
     }
 
-    // public static function getCount(){
+    public static function getCount(){
 
-    //     return self::$count;
-    // }
+        return self::$count;
+    }
 
     public function setName($n){
 
